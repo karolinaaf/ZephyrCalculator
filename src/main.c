@@ -254,14 +254,14 @@ expressionTree* parseParenthesis(parserTok* parser) {
 
 	if (parser->tokens[parser->index] == '(') {
 
-        parser->index++;
+		parser->index++;
 
-        expression = parseAddition(parser);
+		expression = parseAddition(parser);
 
-        if (parser->tokens[parser->index] == ')') {
+		if (parser->tokens[parser->index] == ')') {
 			parser->index++;
 		}
-    }
+	}
 
 	// If there is only a number
 	else expression = parseNumber(parser);
@@ -275,9 +275,9 @@ expressionTree* parseNumber(parserTok* parser) {
 
 	while (strchr("0123456789", parser->tokens[parser->index]) && digits < MSG_SIZE && parser->index < parser->numTokens) {
 
-        number[digits++] = parser->tokens[parser->index];
-        parser->index++;
-    }
+		number[digits++] = parser->tokens[parser->index];
+		parser->index++;
+	}
 
 	number[digits] = '\0';
 
