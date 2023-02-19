@@ -151,7 +151,7 @@ void main(void)
 	printf("Quitting...\n");
 	printf("To exit from QEMU enter: 'CTRL+a, x'\n");
 
-	return 0;
+	return;
 }
 
 /* Return a string of valid tokens */
@@ -294,7 +294,7 @@ expressionTree* createExpressionTree(char type, int val, expressionTree* left, e
 	expression->type = type;
 	expression->val = val;
 	expression->left = left;
-	sexpression->right = right;
+	expression->right = right;
 
 	return expression;
 }
