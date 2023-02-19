@@ -202,13 +202,13 @@ int calculate(expressionTree* expression) {
 	int right = calculate(expression->right);
 
 	if (expression->type == '+')
-        return left + right;
-    else if (expression->type == '-')
-        return left - right;
-    else if (expression->type == '*')
-        return left * right;
-    else if (expression->type == '/')
-        return left / right ? right : 0;
+		return left + right;
+	else if (expression->type == '-')
+		return left - right;
+	else if (expression->type == '*')
+		return left * right;
+	else if (expression->type == '/')
+		return left / right ? right : 0;
 	
 	return 0;
 }
@@ -292,9 +292,9 @@ expressionTree* createExpressionTree(char type, int val, expressionTree* left, e
 	expressionTree* expression = malloc(sizeof(expressionTree));
 
 	expression->type = type;
-    expression->val = val;
-    expression->left = left;
-    expression->right = right;
+	expression->val = val;
+	expression->left = left;
+	sexpression->right = right;
 
 	return expression;
 }
